@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Build
+        shell: cmd
+        run: build.cmd
+
+      - name: Upload unsigned build
+        uses: actions/upload-artifact@v6
+        with:
+          name: VNCFavourites-unsigned
+          path: dist/VNCFavourites.exe
+          if-no-files-found: error
