@@ -52,16 +52,6 @@ This program will not transfer any information to other networked systems unless
 requested by the user or the person installing or operating it. It only starts TightVNC Viewer
 with the connection you choose, and stores its settings on your own PC.
 
-## Code signing policy
-Free code signing provided by [SignPath.io](https://about.signpath.io),
-certificate by [SignPath Foundation](https://signpath.org).
-
-- Committers and reviewers: [MinnowKnight](https://github.com/MinnowKnight)
-- Approvers: [MinnowKnight](https://github.com/MinnowKnight)
-
-Every signed release is built from this repository by the
-[Release workflow](.github/workflows/release.yml) on GitHub Actions and approved manually
-before signing.
 
 ## Building from source
 On Windows, run `build.cmd`. It uses the C# compiler included with Windows, so no Visual Studio
